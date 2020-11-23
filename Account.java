@@ -79,7 +79,6 @@ class Account
 public class Test
 {
 	static Scanner sc = new Scanner(System.in);
-	
 	static int a5_14;
 	
 	static void withdraw(Account ac)
@@ -120,7 +119,6 @@ public class Test
 			{
 				withdraw(ac);
 			}
-			
 			else if (a5_14 == 2)
 			{
 				transfer(ac);
