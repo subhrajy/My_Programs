@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-class Question_4 implements Runnable
+class Sum_Using_Thread implements Runnable
 {
 	int m, sum = 0;
-	static Question_4 q4 = new Question_4();
+	static Sum_Using_Thread su = new Sum_Using_Thread();
 	static Scanner sc = new Scanner(System.in);
 
 	@Override
@@ -15,25 +15,24 @@ class Question_4 implements Runnable
 			System.out.println("Enter n : ");
 			n = sc.nextInt();
 
-			q4.sum += n;
+			su.sum += n;
 		}
 	}
 
 	static void input()
 	{
 		System.out.println("Enter m : ");
-		q4.m = sc.nextInt();
+		su.m = sc.nextInt();
 	}
 
 	public static void main(String[] args)
 	{
 		input();
+		Thread th[] = new Thread[su.m];
 
-		Thread th[] = new Thread[q4.m];
-
-		for (int i = 0; i < q4.m; i++)
+		for (int i = 0; i < su.m; i++)
 		{
-			th[i] = new Thread(q4);
+			th[i] = new Thread(su);
 			th[i].start();
 
 			try
@@ -46,6 +45,6 @@ class Question_4 implements Runnable
 			}
 		}
 
-		System.out.println("sum is - " + q4.sum);
+		System.out.println("sum is - " + su.sum);
 	}
 }
