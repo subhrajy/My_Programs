@@ -60,7 +60,6 @@ class Account
 			}
 			else
 			{
-				System.out.println("Helllo");
 				System.out.println("Transaction complete.\nCurrent balance is " + (this.a3_14 - amt));
 			}
 		}
