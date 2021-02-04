@@ -103,17 +103,17 @@ void main()
 
             switch(exp)
             {
-				          case '+': result = ele2 + ele1;
-					             break;
+		case '+': result = ele2 + ele1;
+			break;
+		
+		case '-': result = ele2 - ele1;
+			break;
 
-				          case '-': result = ele2 - ele1;
-					             break;
+		case '*': result = ele2 * ele1;
+		        break;
 
-				          case '*': result = ele2 * ele1;
-					             break;
-
-				          case '/': result = ele2 / ele1;
-					             break;
+		case '/': result = ele2 / ele1;
+		        break;
 			      }
             push(result);
         }
